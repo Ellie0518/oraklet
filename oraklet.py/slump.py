@@ -1,13 +1,15 @@
 import random
 
-ditt_nummer = random.randint(1, 8)
-datorns_nummer = random.randint(1, 8) 
+ditt_slag = random.randint(1, 6)
+datorns_slag = random.randint(1, 6)
 
 namn = input("Vad heter du?")
 gissa = input("Vad är din gissning?")
 
-if ditt_nummer: int(ditt_nummer > datorns_nummer)
-print("Rätt gissat!")
+print(f"Du slog: {ditt_slag}")
+print(f"Datorn slog: {datorns_slag}")
 
-else datorns_nummer: int(datorns_nummer > ditt_nummer)
-print("tyvärr datorn vann.")
+if ditt_slag > datorns_slag:
+    print("Du vann!")
+else:
+    print("Datorn vann den här gången.")
